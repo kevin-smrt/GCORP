@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Header du menu */
+.header__menu {
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+    background-color: rgba(255, 221, 190, 0.719);
+    font-family: sans-serif;
+    font-weight: 500;
+    font-size: .7em;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+    font-style: normal;
+}
+
+/* Element ul qui englobe le menu */
+.menu {
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+/* Element ul qui englobe les liens en dessous des categories portfolio et informations */
+.menu__sub {
+    position: absolute;
+    /* Permet de placer le sous-menu juste en dessous du header */
+    top: 100px;
+    list-style: none;
+    background-color: rgba(255, 221, 190, 0.719);
+    border: 1px solid rgba(255, 221, 190, 0.719);
+    visibility: hidden;
+    opacity: 0;
+    z-index: -1;
+    transform: translateY(3em);
+    transition: all 0.3s ease, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+}
+
+/* Elements li dand le header du menu */
+.menu__cell {
+    width: 200px;
+    line-height: 100px;
+}
+
+/* Elements li dans l'element ul des categories portfolio et informations */
+.menu__sub__cell {
+    width: 200px;
+    line-height: 40px;
+}
+ 
+/* Liens du menu du header */
+.menu__link {
+    height: 100%;
+    display: block;
+    color: black;
+    text-decoration: none;
+}
+
+.menu__cell--active .menu__sub__cell:hover {
+    background-color: white;
+}
+
+/* Cible les categories portfolio et informations pour afficher le sous-menu au survol et de rester afficher tant qu'il est focus */
+.menu__cell--active:focus .menu__sub,
+.menu__cell--active:hover .menu__sub,
+.menu__cell--active:focus-within .menu__sub {
+    visibility: visible;
+    opacity: 0.8;
+    z-index: 1;
+    transform: translateY(0);
+    transition-delay: 0s, 0s, 0.3s;
+}
+
+/* Enlève le line-heaight du logo qui rajoutait de la hauteur a tout le header */
+.menu__img {
+    line-height: 0;
+}
+
+/* Cible le logo */
+.header__logo {
+    position: relative;
+    top: 10%;
+    height: 80%;
+}
