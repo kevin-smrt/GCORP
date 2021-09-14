@@ -1,6 +1,43 @@
 @import url(../header.css);
 
 body {
-    height: 200vh;
+    height: auto;
 }
 
+.carousel {
+    height: 100vh;
+}
+
+.carousel__slider {
+    height: 100%;
+}
+
+.carousel__slider__slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.carousel__slider__slide.carousel__slider__slide--current {
+    opacity: 1;
+}
+
+.carousel__slider__slide:first-child {
+    background: url(/img/carousel/01.meganeguisnet.photographe.mariage.grasse.jpg) no-repeat center center/cover;
+}
+
+.carousel__slider__slide:nth-child(2) {
+    background: url(/img/carousel/02.meganeguisnet.photographe.grossesse.grasse.jpg) no-repeat center top/cover;
+}
+
+.carousel__slider__slide:nth-child(3) {
+    background: url(/img/carousel/03.meganeguisnet.photographe.couple.grasse.jpg) no-repeat center top/cover;
+}
+
+.carousel__slider__slide:nth-child(4) {
+    background: url(/img/carousel/04.meganeguisnet.photographe.alpesmaritimes.portrait.jpg) no-repeat center top/cover;
+}
