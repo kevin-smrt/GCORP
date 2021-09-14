@@ -1,0 +1,18 @@
+.btn {
+    display: inline-block;
+    padding: 1rem;
+    margin: 1rem;
+    font-size: 1.5rem;
+    font-family: 'Cormorant Garamond', serif;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    background: rgb(240, 240, 240);
+    border: 2px solid rgb(250, 214, 180);
+    box-shadow: 4px 4px 10px rgb(0 0 0 / 30%);
+    transition: all 0.2s ease-in-out;
+}
+
+.btn:hover {
+    border-color: white;
+    background: rgb(250, 214, 180);
+}
