@@ -6,7 +6,7 @@ const router = Router();
 
 // Route racine
 router.get("/", (req, res) => {
-    res.sendFile(__dirname + "/views/index.html");
+    res.status(200).sendFile(__dirname + "/views/index.html");
 });
 
 // Si aucune route n'est trouvée => 404
