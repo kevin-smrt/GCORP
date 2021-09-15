@@ -24,6 +24,10 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
+	/* style perso */
+	background: rgb(240, 240, 240);
+    overflow-x: hidden;
+	/* style perso fin */
 	line-height: 1;
 }
 ol, ul {
@@ -41,3 +45,15 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+/* style perso */
+strong {
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* style perso fin */
