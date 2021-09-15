@@ -7,14 +7,15 @@
 
 /* Aside de l'intro */
 .intro__img {
+    padding: 2rem;
     width: 30%;
     position: relative;
-    margin-top: 150px;
+    margin-top: 100px;
 }
 
 /* Image à l'interieur du aside */
 .intro__img img {
-    float: right;
+    position: relative;
     max-width: 70%;
     border: 10px solid rgb(250, 214, 180);
     box-shadow: 4px 4px 10px rgb(0 0 0 / 30%);
