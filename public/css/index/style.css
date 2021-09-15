@@ -3,7 +3,6 @@
 @import url(../btn.css);
 
 body {
-    height: auto;
     background: rgb(240, 240, 240);
     overflow-x: hidden;
 }
@@ -59,8 +58,25 @@ a {
     background: url(/img/carousel/04.meganeguisnet.photographe.alpesmaritimes.portrait.jpg) no-repeat center top/cover;
 }
 
-.intro_container {
+/* Englobe toute la présentation avec le aside */
+.intro__container {
     width: 100%;
+    display: flex;
+}
+
+/* Aside de l'intro */
+.intro__img {
+    width: 30%;
+    position: relative;
+    margin-top: 150px;
+}
+
+/* Image à l'interieur du aside */
+.intro__img img {
+    float: right;
+    max-width: 70%;
+    border: 10px solid rgb(250, 214, 180);
+    box-shadow: 4px 4px 10px rgb(0 0 0 / 30%);
 }
 
 /* Présentation */
@@ -124,7 +140,7 @@ a {
     align-items: center;
     margin: 1rem;
     width: 90%;
-    background: rgb(240, 240, 240);
+    background: white;
     border: 2px solid rgb(250, 214, 180);
     box-shadow: -4px -4px 10px rgb(0 0 0 / 30%);
 }
@@ -137,14 +153,66 @@ a {
     font-family: 'Cormorant Garamond', serif;
 }
 
-.intro__img {
-    position: relative;
-    top: 150px;
+/* Section des galeries */
+.galeries {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
 }
 
-.intro__img img {
-    float: right;
-    max-width: 25%;
-    border: 10px solid rgb(250, 214, 180);
+/* Theme des galeries */
+.galeries__theme {
+    margin: 2rem;
+    width: calc(100% / 3);
+    height: 500px;
+    text-align: center;
+    border: 3px solid rgb(250, 214, 180);
     box-shadow: 4px 4px 10px rgb(0 0 0 / 30%);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.galeries__theme:nth-child(1) {
+    background-image: url(/img/galeries/Meganeguisnet.photographemariage.grasse.alpesmarities.jpg);
+}
+
+.galeries__theme:nth-child(2) {
+    background-image: url(/img/galeries/meganeguisnet.photographegrossesse.grasse.alpesmaritimes.jpg);
+}
+
+.galeries__theme:nth-child(3) {
+    background-image: url(/img/galeries/meganeguisnet.photographe.portrait.grasse.alpesmaritimes.jpg);
+}
+
+/* Cible les boutons dans le theme de galerie */
+.btn__galeries {
+    position: relative;
+    top: 85%;
+}
+
+/* Englobe tout le dernier CTA pour prendre contact */
+.contact {
+    display: flex;
+    justify-content: center;
+}
+
+.contact__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
+    width: 50%;
+    background: white;
+    border: 2px solid rgb(250, 214, 180);
+    box-shadow: -4px -4px 10px rgb(0 0 0 / 30%);
+}
+
+/* Text du dernier CTA */
+.contact__description {
+    padding: 2rem;
+    text-align: center;
+    letter-spacing: 4px;
+    font-size: 2rem;
+    font-family: 'Cormorant Garamond', serif;
 }
