@@ -1,0 +1,26 @@
+/* Englobe tout le dernier CTA pour prendre contact */
+.contact {
+    padding: 3rem;
+    display: flex;
+    justify-content: center;
+}
+
+.contact__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
+    width: 50%;
+    background: white;
+    border: 2px solid rgb(250, 214, 180);
+    box-shadow: -4px -4px 10px rgb(0 0 0 / 30%);
+}
+
+/* Text du dernier CTA */
+.contact__description {
+    padding: 2rem;
+    text-align: center;
+    letter-spacing: 4px;
+    font-size: 2rem;
+    font-family: 'Cormorant Garamond', serif;
+}

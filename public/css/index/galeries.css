@@ -1,0 +1,38 @@
+
+/* Section des galeries */
+.galeries {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* Theme des galeries */
+.galeries__theme {
+    margin: 2rem;
+    width: calc(100% / 3);
+    height: 500px;
+    text-align: center;
+    border: 3px solid rgb(250, 214, 180);
+    box-shadow: 4px 4px 10px rgb(0 0 0 / 30%);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.galeries__theme:nth-child(1) {
+    background-image: url(/img/galeries/Meganeguisnet.photographemariage.grasse.alpesmarities.jpg);
+}
+
+.galeries__theme:nth-child(2) {
+    background-image: url(/img/galeries/meganeguisnet.photographegrossesse.grasse.alpesmaritimes.jpg);
+}
+
+.galeries__theme:nth-child(3) {
+    background-image: url(/img/galeries/meganeguisnet.photographe.portrait.grasse.alpesmaritimes.jpg);
+}
+
+/* Cible les boutons dans le theme de galerie */
+.btn__galeries {
+    position: relative;
+    top: 85%;
+}
