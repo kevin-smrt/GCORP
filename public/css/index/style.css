@@ -193,6 +193,7 @@ a {
 
 /* Englobe tout le dernier CTA pour prendre contact */
 .contact {
+    padding: 3rem;
     display: flex;
     justify-content: center;
 }
@@ -215,4 +216,48 @@ a {
     letter-spacing: 4px;
     font-size: 2rem;
     font-family: 'Cormorant Garamond', serif;
+}
+
+/* Footer */
+
+.footer__insta {
+    display: flex;
+    justify-content: space-evenly;
+    background: rgb(250, 214, 180);
+}
+
+.footer__insta__img {
+    margin: 2rem;
+    height: 150px;
+    
+    /* Valeur arbitraire, normalement ce serait divisé par 5 (nombre de photos) mais je préfère comme ça pour la largeur */
+    width: calc(100% / 8);
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 4px 4px 10px rgb(0 0 0 / 30%);
+    background-color: tomato;
+}
+
+.footer__insta__img:nth-child(1) {
+    background-image: url(/img/footer/MG_insta_footer_1.jpg);
+}
+.footer__insta__img:nth-child(2) {
+    background-image: url(/img/footer/MG_insta_footer_2.jpg);
+}
+.footer__insta__img:nth-child(3) {
+    background-image: url(/img/footer/MG_insta_footer_3.jpg);
+}
+.footer__insta__img:nth-child(4) {
+    background-image: url(/img/footer/MG_insta_footer_4.jpg);
+}
+.footer__insta__img:nth-child(5) {
+    background-image: url(/img/footer/MG_insta_footer_5.jpg);
+}
+
+.legal {
+    font-size: 1rem;
+    font-family: 'Cormorant Garamond', serif;
+    color: black;
 }
