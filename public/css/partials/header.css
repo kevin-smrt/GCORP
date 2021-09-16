@@ -86,3 +86,19 @@
     top: 10%;
     height: 80%;
 }
+
+.menu__cell::after {
+    position: relative;
+    content: '';
+    display: block;
+    width: 0;
+    top: -40%;
+    height: 1px;
+    background: black;
+    transition: width .3s;
+}
+
+.menu__cell:hover::after {
+    width: 100%;
+    transition: width .3s;
+}
