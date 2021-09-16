@@ -33,3 +33,23 @@
         transform: translateY(0%);
     }
 }
+
+.slide_left {
+    opacity: 1;
+    animation: slideLeft 1.5s ease;
+}
+
+.slide_right {
+    opacity: 1;
+    animation: slideRight 1.5s ease;
+}
+
+.slide_top {
+    opacity: 1;
+    animation: slideTop 1.5s ease;
+}
+
+.slide_bot {
+    opacity: 1;
+    animation: slideBot 1.5s ease;
+}
