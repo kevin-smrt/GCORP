@@ -1,9 +1,9 @@
 /* Reset de tout les styles */
-@import url(../reset.css);
+@import url(../partials/reset.css);
 /* Import du menu */
-@import url(../header.css);
+@import url(../partials/header.css);
 /* Import de la classe btn */
-@import url(../btn.css);
+@import url(../partials/btn.css);
 /* Import du carousel */
 @import url(carousel.css);
 /* Import de la partie présentation */
@@ -13,4 +13,4 @@
 /* Import de la partie contact */
 @import url(contact.css);
 /* Import du footer */
-@import url(../footer.css);
+@import url(../partials/footer.css);
