@@ -8,11 +8,12 @@ const galeries = document.querySelector('.galeries');
 window.addEventListener('scroll', () => {
     // Prend la valeur qui correspond au scroll sur l'axe Y
     let offset = window.scrollY;
-    console.log(offset)
+
     // Déplace la photo selon la valeur du scroll
     profilPicture.style.top = `${offset * 0.1}px`
     profilPicture.style.left = `${offset * 0.08}px`
 
+    // Si offset est supérieur à 100, ajoute la classe slide_left, sinon la retire
     offset > 100 ? profilPicture.classList.add('slide_left') : profilPicture.classList.remove('slide_left');
 
     offset > 100 ? headerIntro.classList.add('slide_left') : headerIntro.classList.remove('slide_left');
