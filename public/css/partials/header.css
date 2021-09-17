@@ -87,7 +87,8 @@
     height: 80%;
 }
 
-.menu__cell::after {
+/* Ajoute un effet au survol aux classes menu__cell sauf celle qui a la classe menu__img*/
+.menu__cell:not(.menu__img)::after {
     position: relative;
     content: '';
     display: block;
