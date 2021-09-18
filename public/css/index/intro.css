@@ -93,3 +93,26 @@
     font-size: 1.5rem;
     font-family: 'Cormorant Garamond', serif;
 }
+
+@media screen and (max-width: 1200px) {
+    .intro__container {
+        flex-direction: column;
+    }
+
+    .intro__img {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        position: relative;
+        margin-top: 50px;
+    }
+
+    .intro__img img {
+        max-width: 30%;
+    }
+
+    .intro {
+        margin: 1rem;
+        width: 100%;
+    }
+}
