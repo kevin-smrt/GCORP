@@ -27,7 +27,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    float: right;
 }
 
 /* Header de la présentation */
@@ -97,18 +96,31 @@
 @media screen and (max-width: 1200px) {
     .intro__container {
         flex-direction: column;
+        align-items: center;
+    }
+
+    .header__intro {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header__intro__sub {
+        width: 90%;
     }
 
     .intro__img {
         display: flex;
         justify-content: center;
-        width: 100%;
+        width: 90%;
         position: relative;
         margin-top: 50px;
     }
 
     .intro__img img {
         max-width: 30%;
+        justify-content: center;
     }
 
     .intro {
