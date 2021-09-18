@@ -9,9 +9,15 @@ window.addEventListener('scroll', () => {
     // Prend la valeur qui correspond au scroll sur l'axe Y
     let offset = window.scrollY;
 
-    // Déplace la photo selon la valeur du scroll
-    profilPicture.style.top = `${offset * 0.1}px`
-    profilPicture.style.left = `${offset * 0.08}px`
+    // Si la taille de la fenêtre est supérieur a 1200px
+    if (window.innerWidth > 1200) {
+        // Déplace la photo selon la valeur du scroll
+        profilPicture.style.top = `${offset * 0.1}px`
+        profilPicture.style.left = `${offset * 0.08}px`
+    } else { // Si l'utilisateur change la taille manuellement, il peut y avoir un problème de position, donc l'image est reset a sa position de base
+        profilPicture.style.top = `0px`
+        profilPicture.style.left = `0px`
+    }
 
     // Si offset est supérieur à 100, ajoute la classe slide_left, sinon la retire
     offset > 100 ? profilPicture.classList.add('slide_left') : profilPicture.classList.remove('slide_left');
