@@ -24,3 +24,9 @@
     font-size: 2rem;
     font-family: 'Cormorant Garamond', serif;
 }
+
+@media screen and (max-width: 1200px) {
+    .contact__container {
+        width: 100%;
+    }
+}
