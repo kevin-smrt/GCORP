@@ -36,3 +36,15 @@
     position: relative;
     top: 85%;
 }
+
+
+@media screen and (max-width: 1200px) {
+    .galeries {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .galeries__theme {
+        width: 90%;
+    }
+}
