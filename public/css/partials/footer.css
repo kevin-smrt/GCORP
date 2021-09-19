@@ -41,3 +41,11 @@
     font-family: 'Cormorant Garamond', serif;
     color: black;
 }
+
+@media screen and (max-width: 1200px) {
+    .footer__insta__img {
+        margin: .5rem;
+        width: calc(100% / 5);
+        height: 100px;
+    }
+}
