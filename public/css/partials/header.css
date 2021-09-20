@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    user-select: none;
 }
 
 /* Header du menu */
@@ -23,45 +24,24 @@
     display: flex;
     justify-content: space-around;
     list-style: none;
+    line-height: 100px;
+    height: 100px;
 }
 
 /* Element ul qui englobe les liens en dessous des categories portfolio et informations */
 .menu__sub {
-    position: absolute;
-    /* Permet de placer le sous-menu juste en dessous du header */
-    top: 100px;
-    list-style: none;
-    background-color: rgba(255, 221, 190, 0.719);
-    border: 1px solid rgba(255, 221, 190, 0.719);
     visibility: hidden;
+    border: 1px rgba(0, 0, 0, 0.096) solid;
+    background-color: rgb(250, 214, 180);
     opacity: 0;
     z-index: -1;
     transform: translateY(3em);
     transition: all 0.3s ease, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
 }
 
-/* Elements li dand le header du menu */
-.menu__cell {
-    width: 200px;
-    line-height: 100px;
-}
-
-/* Elements li dans l'element ul des categories portfolio et informations */
-.menu__sub__cell {
-    width: 200px;
-    line-height: 40px;
-}
- 
 /* Liens du menu du header */
 .menu__link {
-    height: 100%;
-    display: block;
-    color: black;
-    text-decoration: none;
-}
-
-.menu__cell--active .menu__sub__cell:hover {
-    background-color: white;
+    display: inline-block;
 }
 
 /* Cible les categories portfolio et informations pour afficher le sous-menu au survol et de rester afficher tant qu'il est focus */
@@ -75,31 +55,44 @@
     transition-delay: 0s, 0s, 0.3s;
 }
 
-/* Enlève le line-heaight du logo qui rajoutait de la hauteur a tout le header */
-.menu__img {
-    line-height: 0;
-}
-
-/* Cible le logo */
-.header__logo {
-    position: relative;
-    top: 10%;
-    height: 80%;
-}
-
 /* Ajoute un effet au survol aux classes menu__cell sauf celle qui a la classe menu__img*/
-.menu__cell:not(.menu__img)::after {
+.menu__link:not(.menu__img)::after {
     position: relative;
     content: '';
     display: block;
     width: 0;
-    top: -40%;
     height: 1px;
-    background: black;
+    background-color: black;
+    top: -40px;
     transition: width .3s;
 }
 
-.menu__cell:hover::after {
+.menu__link:hover::after {
     width: 100%;
     transition: width .3s;
+}
+
+/* Elements li dans l'element ul des categories portfolio et informations */
+.menu__sub__cell {
+    line-height: 60px;
+    height: 60px;
+}
+
+.menu__sub__cell:hover {
+    opacity: 1;
+    background-color: white;
+}
+
+/* Cible les liens dans le sous-menu */
+.menu__link__sub {
+    display: block;
+}
+
+/* Menu hamburger */
+.menu__mobile {
+    display: none;
+}
+
+@media screen and (max-width: 850px) {
+
 }
