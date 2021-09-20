@@ -15,25 +15,33 @@
     <body>
         <!-- Header -->
         <header class="header__menu">
+
+            <!-- Menu Hamburger pour mobile -->
+            <div class="menu__mobile">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+
             <!-- Menu -->
             <nav>
                 <ul class="menu">
                     <li class="menu__cell"><a class="menu__link" href="#">Présentation</a></li>
                     <li class="menu__cell menu__cell--active"><a class="menu__link" href="#">Portfolio</a>
                         <ul class="menu__sub">
-                            <li class="menu__sub__cell"><a class="menu__link" href="">Mariage</a></li>
-                            <li class="menu__sub__cell"><a class="menu__link" href="">Famille/Couple</a></li>
-                            <li class="menu__sub__cell"><a class="menu__link" href="">Portrait</a></li>
+                            <li class="menu__sub__cell"><a class="menu__link__sub" href="">Mariage</a></li>
+                            <li class="menu__sub__cell"><a class="menu__link__sub" href="">Famille/Couple</a></li>
+                            <li class="menu__sub__cell"><a class="menu__link__sub" href="">Portrait</a></li>
                         </ul>
                     </li>
-                    <li class="menu__cell menu__img"><a class="menu__link" href="#">
+                    <li class="menu__cell"><a class="menu__link menu__img" href="#">
                         <img class="header__logo" src="./img/logo_black.png" alt="logo">
                     </a></li>
                     <li class="menu__cell menu__cell--active"><a class="menu__link" href="#">Informations</a>
                         <ul class="menu__sub">
-                            <li class="menu__sub__cell"><a class="menu__link" href="">Mariage</a></li>
-                            <li class="menu__sub__cell"><a class="menu__link" href="">Famille/Couple</a></li>
-                            <li class="menu__sub__cell"><a class="menu__link" href="">Portrait</a></li>
+                            <li class="menu__sub__cell"><a class="menu__link__sub" href="">Mariage</a></li>
+                            <li class="menu__sub__cell"><a class="menu__link__sub" href="">Famille/Couple</a></li>
+                            <li class="menu__sub__cell"><a class="menu__link__sub" href="">Portrait</a></li>
                         </ul>
                     </li>
                     <li class="menu__cell"><a class="menu__link" href="#">Contact</a></li>
@@ -134,6 +142,7 @@
 
         <!-- JS script -->
         <script src="/js/index.js"></script>
+        <script src="/js/menu.js"></script>
         <script src="/js/scrollAnim.js"></script>
         <!-- JS script END -->
     </body>
