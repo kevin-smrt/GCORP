@@ -93,6 +93,106 @@
     display: none;
 }
 
-@media screen and (max-width: 850px) {
+/* Logo pour la version mobile */
+.logo__mobile {
+    display: none;
+}
 
+@media screen and (max-width: 850px) {
+    /* Donne toute la hauteur pour le header et enlève la couleur d'arrière plan */
+    .header__menu {
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+    }
+
+    /* Prend toute la place dans le conteneur pour que le menu puisse en prendre seulement 80% */
+    .header__menu nav {
+        height: 100%;
+        width: 100%;
+    }
+
+    /* Menu fixé et placé en bas, remonte quand il est activé. Place les élément en colonne */
+    .menu {
+        position: fixed;
+        width: 100%;
+        height: 80%;
+        bottom: 0;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(255, 221, 190, 0.719);
+        transition: all 0.5s ease-in;
+        transform: translateY(100%);
+    }
+    
+    /* Classe ajouté en JS quand le menu hamburger est clické */
+    .active {
+        transform: translateY(0);
+        opacity: 1;
+        z-index: 10;
+    }
+
+    /* Dispose correctement le sous-menu */
+    .menu__sub {
+        position: absolute;
+        width: 100%;
+        left: 0;
+    }
+
+    /* Etend les elements du menu pour que ce soit plus facilement cliquable */
+    .menu__cell, .menu__link {
+        width: 100%;
+    }
+
+    .menu__link:hover::after {
+        width: 0;
+    }
+
+    /* Enlève le logo du menu pour laisser place à celui de la version mobile */
+    .header__logo {
+        display: none;
+    }
+
+    .logo__mobile {
+        position: relative;
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        left: 50%;
+        top: 20px;
+        transform: translateX(-50%);
+    }
+
+
+    /* Création du menu hamburger */
+    .menu__mobile {
+        display: block;
+        position: fixed;
+        margin: 50px;
+        right: 0;
+        letter-spacing: 0;
+        z-index: 2;
+        cursor: pointer;
+    }
+
+    .line {
+        margin: 3px;
+        width: 25px;
+        height: 3px;
+        border: 1px solid rgba(0, 0, 0, 0.288);
+        background-color: rgb(250, 214, 180);
+        transition: all 0.3s ease;
+    }
+
+    .toggle .line:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px,6px);
+    }
+
+    .toggle .line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .toggle .line:nth-child(3) {
+        transform: rotate(45deg) translate(-5px,-6px);
+    }
 }
