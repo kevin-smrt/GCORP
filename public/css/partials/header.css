@@ -41,6 +41,7 @@
 
 /* Liens du menu du header */
 .menu__link {
+    height: 100px;
     display: inline-block;
 }
 
