@@ -158,7 +158,7 @@
     }
 
     .logo__mobile {
-        position: relative;
+        position: fixed;
         display: inline-block;
         width: 100px;
         height: 100px;
