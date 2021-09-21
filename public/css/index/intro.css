@@ -91,6 +91,10 @@
 }
 
 @media screen and (max-width: 600px) {
+    .intro__about__theme {
+        font-size: .9rem;
+    }
+
     .intro__img {
         height: 360px;
     }
