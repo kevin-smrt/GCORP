@@ -1,130 +1,91 @@
-/* Englobe toute la présentation avec le aside */
 .intro__container {
+    font-family: 'Cormorant Garamond', serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
     width: 100%;
-    display: flex;
 }
 
-/* Aside de l'intro */
 .intro__img {
-    padding: 2rem;
-    width: 30%;
-    position: relative;
-    margin-top: 100px;
-}
-
-/* Image à l'interieur du aside */
-.intro__img img {
-    position: relative;
-    max-width: 70%;
-    border: 10px solid rgb(250, 214, 180);
-    box-shadow: 4px 4px 10px rgb(0 0 0 / 30%);
-}
-
-/* Présentation */
-.intro {
-    width: 70%;
-    position: relative;
+    width: 50%;
+    height: 700px;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
-/* Header de la présentation */
-.header__intro {
-    width: 70%;
-    text-align: center;
-    font-weight: 400;
-    font-family: 'Cormorant Garamond', serif;
-}
-
-/* Theme présent dans le header de la présentation */
-.header__intro__theme {
-    padding: 3rem 3rem 2rem;
-    font-size: 2rem;
-    letter-spacing: 8px;
-}
-
-/* Titre du header de la présentation */
-.header__intro__title {
-    padding: 1rem;
-    font-size: 3rem;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-}
-
-/* Sous-présentations en dessous du titre */
-.header__intro__sub {
-    padding: 1rem;
-    font-size: 1.5rem;
-    font-style: italic;
-    letter-spacing: 0;
-    color: #84847c;
-}
-
-.header__intro__sub:nth-child(3) {
-    text-align: left;
-}
-
-.header__intro__sub:nth-child(4) {
-    text-align: right;
-}
-
-.header__intro__sub:nth-child(5) {
-    text-align: left;
-}
-
-/* Contenu principal de la présentation */
-.main__intro {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 1rem;
+.intro__img__profil {
+    height: 100%;
     width: 90%;
-    background: white;
-    border: 2px solid rgb(250, 214, 180);
-    box-shadow: -4px -4px 10px rgb(0 0 0 / 30%);
+    background-image: url(/img/about/test.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
-/* Paragraphe du contenu principal de la présentation */
-.main__intro__about {
+.intro__about {
+    width: 50%;
+    height: 100%;
+}
+
+.intro__about__theme {
+    position: relative;
     padding: 1rem;
+    margin-top: 50px;
     text-align: center;
-    font-size: 1.5rem;
-    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: 5px;
+}
+
+.intro__about__title {
+    padding: 1rem;
+    text-align: left;
+    font-size: 2.5rem;
+}
+
+.intro__about__separation {
+    margin: 1rem auto;
+    width: 95%;
+    height: 2px;
+    background-color: rgb(255, 207, 162);
+    border: none;
+}
+
+.intro__about__sub {
+    text-align: left;
+    padding: 1rem;
+    font-size: 1.2rem;
+}
+
+.intro__about__more {
+    display: inline-block;
+    margin: 1rem;
+    border: 1px solid rgb(250, 190, 134);;
+    background-color: rgb(255, 207, 162);;
+    font-weight: 700;
 }
 
 @media screen and (max-width: 1200px) {
     .intro__container {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column-reverse;
     }
 
-    .header__intro {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .header__intro__sub {
+    .intro__about, .intro__img {
         width: 90%;
     }
 
     .intro__img {
-        display: flex;
-        justify-content: center;
-        width: 90%;
-        position: relative;
-        margin-top: 50px;
+        height: 500px;
     }
 
-    .intro__img img {
-        max-width: 30%;
-        justify-content: center;
+    .intro__about__theme {
+        margin-top: 10px;
+        font-size: 1.5rem;
     }
 
-    .intro {
-        margin: 1rem;
-        width: 100%;
+    .intro__about__title {
+        font-size: 2rem;
     }
 }
