@@ -8,7 +8,7 @@
 }
 
 .intro__img {
-    width: 50%;
+    width: 40%;
     height: 700px;
     display: flex;
     justify-content: center;
@@ -25,7 +25,7 @@
 }
 
 .intro__about {
-    width: 50%;
+    width: 40%;
     height: 100%;
 }
 
@@ -87,5 +87,11 @@
 
     .intro__about__title {
         font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .intro__img {
+        height: 360px;
     }
 }
