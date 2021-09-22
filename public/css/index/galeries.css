@@ -34,7 +34,7 @@
 }
 
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1000px) {
     .galeries {
         flex-direction: column;
         align-items: center;
@@ -42,5 +42,16 @@
     
     .galeries__theme {
         width: 90%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .galeries__theme__img {
+        height: 250px;
+    }
+
+    .btn__galeries {
+        top: 200px;
+        font-size: 1rem;
     }
 }
