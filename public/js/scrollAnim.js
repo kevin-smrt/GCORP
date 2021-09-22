@@ -1,5 +1,6 @@
 // Récupère les éléments qui vont s'activer au scroll
 const profilPicture = document.querySelector('.intro__img__profil');
+const bgPicture = document.querySelector('.intro__img__bg');
 const galeries = document.querySelector('.galeries');
 const headerIntro = document.querySelector('.intro__about');
 
@@ -13,6 +14,8 @@ const observer = new IntersectionObserver((entries, observer) => {
             switch (entry.target.className) {
                 case "intro__img__profil":
                     entry.target.src = entry.target.dataset.src;
+                    bgPicture.src = bgPicture.dataset.src;
+                    bgPicture.classList.add('slide_bot');
                     entry.target.classList.add('slide_left');
                     break;
 
