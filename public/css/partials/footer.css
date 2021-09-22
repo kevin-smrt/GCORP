@@ -13,27 +13,9 @@
     /* Valeur arbitraire, normalement ce serait divisé par 5 (nombre de photos) mais je préfère comme ça pour la largeur */
     width: calc(100% / 8);
 
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    object-fit: cover;
     box-shadow: 4px 4px 10px rgb(0 0 0 / 30%);
     background-color: tomato;
-}
-
-.footer__insta__img:nth-child(1) {
-    background-image: url(/img/footer/MG_insta_footer_1.jpg);
-}
-.footer__insta__img:nth-child(2) {
-    background-image: url(/img/footer/MG_insta_footer_2.jpg);
-}
-.footer__insta__img:nth-child(3) {
-    background-image: url(/img/footer/MG_insta_footer_3.jpg);
-}
-.footer__insta__img:nth-child(4) {
-    background-image: url(/img/footer/MG_insta_footer_4.jpg);
-}
-.footer__insta__img:nth-child(5) {
-    background-image: url(/img/footer/MG_insta_footer_5.jpg);
 }
 
 .legal {
