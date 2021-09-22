@@ -19,4 +19,3 @@ const footerObserver = new IntersectionObserver((entries, observer) => {
 
 // Elements que l'API obeserve
 footerObserver.observe(instaPictures);
-
