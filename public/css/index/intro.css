@@ -88,8 +88,20 @@
 }
 
 @media screen and (max-width: 600px) {
+    .intro__about {
+        width: 100%;
+    }
+
     .intro__about__theme {
-        font-size: .9rem;
+        font-size: .7rem;
+    }
+
+    .intro__about__title {
+        font-size: 1.5rem;
+    }
+
+    .intro__about__sub {
+        font-size: 1rem;
     }
 
     .intro__img {
