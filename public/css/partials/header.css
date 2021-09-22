@@ -4,6 +4,13 @@
     user-select: none;
 }
 
+ body {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(/img/about/background.jpg);
+    background-attachment: fixed;
+ }
+
 /* Header du menu */
 .header__menu {
     position: fixed;
