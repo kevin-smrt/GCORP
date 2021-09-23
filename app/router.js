@@ -4,9 +4,14 @@ const { Router } = require("express");
 // Initialisation du router
 const router = Router();
 
-// Route racine
+// Page d'accueil
 router.get("/", (req, res) => {
     res.status(200).sendFile(__dirname + "/views/index.html");
+});
+
+// Page de présentation
+router.get("/presentation", (req, res) => {
+    res.status(200).sendFile(__dirname + "/views/presentation.html");
 });
 
 // Si aucune route n'est trouvée => 404
