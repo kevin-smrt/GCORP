@@ -4,8 +4,8 @@
 @import url(../partials/header.css);
 /* Import de la classe btn */
 @import url(../partials/btn.css);
-
-
+/* Import de la partie présentation */
+@import url(intro.css);
 /* Import du footer */
 @import url(../partials/footer.css);
 /* Import des keyframes */
