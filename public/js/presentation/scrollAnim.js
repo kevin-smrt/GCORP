@@ -1,7 +1,11 @@
 // Récupère les éléments qui vont s'activer au scroll
-const profilPicture = document.querySelector('.intro__img__profil');
-const bgPicture = document.querySelector('.intro__img__bg');
-const headerIntro = document.querySelector('.intro__about');
+const bgPicture = document.querySelector('#img-1');
+const profilPicture = document.querySelector('#img-2');
+const flowerPicture = document.querySelector('#img-3');
+const bridePicture = document.querySelector('#img-4');
+
+const firstText = document.querySelector('#text-1');
+const secondText = document.querySelector('#text-2');
 
 // Création d'une instance de l'API intersection observer
 const observer = new IntersectionObserver((entries, observer) => {
@@ -10,16 +14,26 @@ const observer = new IntersectionObserver((entries, observer) => {
         // Si l'élément rentre dans le viewport
         if (entry.isIntersecting) {
             // Par rapport à son nom de classe, effectue une action
-            switch (entry.target.className) {
-                case "intro__img__profil":
+            switch (entry.target.id) {
+                case "img-2":
                     entry.target.src = entry.target.dataset.src;
                     bgPicture.src = bgPicture.dataset.src;
                     bgPicture.classList.add('slide_bot');
                     entry.target.classList.add('slide_left');
                     break;
 
-                case "intro__about":
+                case "img-4":
+                    flowerPicture.src = flowerPicture.dataset.src;
+                    entry.target.src = entry.target.dataset.src;
+                    flowerPicture.classList.add('slide_bot');
                     entry.target.classList.add('slide_right');
+
+                case "text-1":
+                    entry.target.classList.add('slide_right');
+
+                case "text-2":
+                    entry.target.classList.add('slide_left');
+
             
                 default:
                     break;
@@ -33,7 +47,9 @@ const observer = new IntersectionObserver((entries, observer) => {
 
 // Elements que l'API obeserve
 observer.observe(profilPicture);
-observer.observe(headerIntro);
+observer.observe(bridePicture);
+observer.observe(firstText);
+observer.observe(secondText);
 
 
 
