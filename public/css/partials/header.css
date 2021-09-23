@@ -48,6 +48,7 @@
 
 /* Liens du menu du header */
 .menu__link {
+    cursor: pointer;
     height: 100px;
     display: inline-block;
 }
