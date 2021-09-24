@@ -1,0 +1,12 @@
+/* Reset de tout les styles */
+@import url(../partials/reset.css);
+/* Import du menu */
+@import url(../partials/header.css);
+/* Import de la classe btn */
+@import url(../partials/btn.css);
+
+
+/* Import du footer */
+@import url(../partials/footer.css);
+/* Import des keyframes */
+@import url(../partials/keyframes.css);
