@@ -19,6 +19,11 @@ router.get("/contact", (req, res) => {
     res.status(200).sendFile(__dirname + "/views/contact.html");
 });
 
+// Page d'informations
+router.get("/informations", (req, res) => {
+    res.status(200).sendFile(__dirname + "/views/informations.html");
+});
+
 // Si aucune route n'est trouvée => 404
 router.use((req, res) => {
     res.status(404).sendFile(__dirname + "/views/404.html");
