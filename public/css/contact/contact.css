@@ -3,10 +3,9 @@
     font-size: 2rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
 }
 
-.contact img {
+.contact__info__icon {
     height: 40px;
     width: 40px;
 }
@@ -24,13 +23,21 @@
     text-decoration: underline;
 }
 
+.background__picture {
+    height: 100%;
+    width: 100%;
+    border: 1px solid rgb(250, 190, 134);
+    object-fit: cover;
+    object-position: center;
+}
+
 @media screen and (max-width: 1400px) {
     .contact hr {
         display: none;
     }
 
-    .contact {
-        flex-direction: row;
+    .background__picture {
+        display: none;
     }
 }
 
