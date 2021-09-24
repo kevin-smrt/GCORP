@@ -1,0 +1,47 @@
+.contact {
+    margin: 1rem;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact img {
+    height: 40px;
+    width: 40px;
+}
+
+.contact__info {
+    display: flex;
+    align-items: center;
+}
+
+.contact__sub {
+    margin: 1rem;
+}
+
+.--underline {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 1400px) {
+    .contact hr {
+        display: none;
+    }
+
+    .contact {
+        flex-direction: row;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .contact {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .contact {
+        font-size: 1.5rem;
+    }
+}

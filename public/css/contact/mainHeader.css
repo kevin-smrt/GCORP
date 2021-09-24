@@ -1,0 +1,44 @@
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main__header {
+    position: relative;
+    margin: 0 auto;
+    width: 70%;
+    padding-top: 200px;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.main__header__title {
+    padding: 1rem;
+    text-align: left;
+    font-size: 2.5rem;
+}
+
+.main__header__sub {
+    padding: 1rem;
+    font-size: 1.2rem;
+}
+
+.main__header__separation {
+    margin: 1rem auto;
+    width: 95%;
+    height: 2px;
+    background-color: rgb(255, 207, 162);
+    border: none;
+}
+
+@media screen and (max-width: 900px) {
+    .main__header {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .main__header__sub {
+        font-size: 1rem;
+    }
+}
