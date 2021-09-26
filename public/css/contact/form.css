@@ -1,3 +1,4 @@
+/* Elements du formulaire de contact */
 input, select, textarea {
     padding: 1rem;
     margin: 1rem;
@@ -12,6 +13,7 @@ label {
     margin: 1rem;
 }
 
+/* Cible toute la section comprenant le formulaire et les informations de contact */
 .form {
     position: relative;
     font-family: 'Cormorant Garamond', serif;
@@ -20,6 +22,7 @@ label {
     justify-content: space-evenly;
 }
 
+/* Cible le formulaire */
 .form form {
     margin: 1rem;
     background-color: white;
@@ -27,23 +30,27 @@ label {
     border: 1px solid rgb(255, 207, 162);
 }
 
+/* Cible l'input select du formulaire */
 .form__select {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
 
+/* Cible les informations de base du formulaire (nom/prenom, email et telephone */
 .form__infos {
     display: flex;
     justify-content: left;
 }
 
+/* Cible la balise textarea du formulaire */
 textarea {
     min-width: 35rem;
     max-width: 35rem;
     min-height: 150px;
 }
 
+/* Cible le bouton submit du formulaire */
 .form__details__submit {
     cursor: pointer;
     display: block;
@@ -56,6 +63,7 @@ textarea {
 }
 
 @media screen and (max-width: 1400px) {
+    /* Dispose la section en colonne et inverse les positions des informations de contact et du formulaire */
     .form {
         flex-direction: column-reverse;
         align-items: center;
@@ -72,6 +80,7 @@ textarea {
         margin: .5rem;
     }
 
+    /* Dispose les informations de base en colonne */
     .form__infos {
         flex-direction: column;
         align-items: flex-start;
@@ -93,6 +102,7 @@ textarea {
         max-width: 15rem;
     }
 
+    /* Dispose les informations lorsque le select est sur mariage, en colonne */
     .form__mariage {
         display: flex;
         flex-direction: column;

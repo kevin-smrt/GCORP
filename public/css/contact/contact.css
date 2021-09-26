@@ -1,3 +1,4 @@
+/* Cible la balise address de la section form */
 .contact {
     margin: 1rem;
     font-size: 2rem;
@@ -5,24 +6,29 @@
     flex-direction: column;
 }
 
+/* Icon au format SVG de la partie contact */
 .contact__info__icon {
     height: 40px;
     width: 40px;
 }
 
+/* Cible la div qui englobe l'icone et le texte de contact */
 .contact__info {
     display: flex;
     align-items: center;
 }
 
+/* Texte de la div contact__infos */
 .contact__sub {
     margin: 1rem;
 }
 
+/* Souligne l'élément (dans ce cas le lien vers le compte instagram, pour bien marqué la difference et savoir que c'est un lien) */
 .--underline {
     text-decoration: underline;
 }
 
+/* Image d'accompagnement */
 .background__picture {
     height: 100%;
     width: 100%;
@@ -32,10 +38,12 @@
 }
 
 @media screen and (max-width: 1400px) {
+    /* Cache les séparations */
     .contact hr {
         display: none;
     }
 
+    /* Cache l'image d'accompagnement */
     .background__picture {
         display: none;
     }
