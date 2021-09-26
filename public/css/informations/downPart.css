@@ -1,8 +1,10 @@
+/* Cible la partie basse de la section */
 .down-part {
     height: 300px;
     width: 100%;
 }
 
+/* Cible la div qui englobe tout les avis */
 #slider, #slider_bis, #slider_ter {
     position: relative;
     width: 50%;
@@ -26,6 +28,7 @@ input[type=radio]:checked {
     opacity: 1;
 }
 
+/* Cible les labels des div slider */
 #slider label, #slider_bis label, #slider_ter label {
     position: absolute;
     padding: 1rem;
@@ -45,6 +48,7 @@ input[type=radio]:checked {
     transition: transform 400ms ease;
 }
 
+/* Ajoute un fond blanc sur tout les slide */
 #slide1, #slide1_bis, #slide1_ter {
     background: white;
 }
@@ -64,6 +68,10 @@ input[type=radio]:checked {
 #slide5, #slide5_bis, #slide5_ter {
     background: white;
 }
+
+/*
+    Cible toute les possibilité (si 1er input check etc..)  
+*/
 
 #s1:checked ~ #slide1, #s2:checked ~ #slide2, #s3:checked ~ #slide3, #s4:checked ~ #slide4, #s5:checked ~ #slide5,
 #a1:checked ~ #slide1_bis, #a2:checked ~ #slide2_bis, #a3:checked ~ #slide3_bis, #a4:checked ~ #slide4_bis, #a5:checked ~ #slide5_bis,

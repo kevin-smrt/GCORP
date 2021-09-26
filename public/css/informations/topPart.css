@@ -1,3 +1,4 @@
+/* Element de séparation */
 .spacer {
     padding-top: 150px;
 }
@@ -6,21 +7,25 @@ strong {
     font-weight: 700;
 }
 
+/* Cible la partie haute de la section qui regroupe l'image et le texte */
 .top-part {
     display: flex;
     padding: 5rem;
 }
 
+/* Cible l'image de la section et son arrière plan */
 .picture-container {
     position: relative;
     width: 50%;
 }
 
+/* Cible la partie texte de la section */
 .text-container {
     width: 40%;
     font-family: 'Cormorant Garamond', serif;
 }
 
+/* Image de la div picture-container */
 .picture__img {
     position: relative;
     left: 50%;
@@ -32,10 +37,12 @@ strong {
     border: 1px solid rgb(250, 214, 180);
 }
 
+/* Change la couleur de la bordure en blanc quand l'image est sur un arrière plan foncé */
 .--white {
     border: 1px solid white;
 }
 
+/* Arrière plan de l'image de la div picture-container */
 .picture__background {
     position: absolute;
     width: 50%;
@@ -44,12 +51,14 @@ strong {
     background-color: rgb(250, 214, 180);
 }
 
+/* Place l'arrière plan a droite quand la section comporte une image sur la droite */
 .--right {
     background-color: white;
     left: unset;
     right: 5%;
 }
 
+/* Titre de la div text-container */
 .text__title {
     padding: 2rem;
     font-size: 2.5rem;
@@ -59,11 +68,13 @@ strong {
     text-align: center;
 }
 
+/* Texte informatif de la div text-container */
 .text__sub {
     font-size: 1.3rem;
     line-height: 1.2;
 }
 
+/* Cible la section famille */
 #famille {
     padding-bottom: 50px;
     background: rgb(255, 230, 207);
