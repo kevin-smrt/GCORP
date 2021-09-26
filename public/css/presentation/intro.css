@@ -1,3 +1,4 @@
+/* Englobe toute la section intro */
 .intro__container {
     font-family: 'Cormorant Garamond', serif;
     padding-top: 100px;
@@ -8,6 +9,7 @@
     width: 100%;
 }
 
+/* Cible l'image et l'arrière plan de la section */
 .intro__img {
     position: relative;
     width: 40%;
@@ -15,6 +17,7 @@
     display: flex;
 }
 
+/* Arrière plan de la div intro__img */
 .intro__img__bg {
     position: absolute;
     top: 300px;
@@ -23,10 +26,12 @@
     object-fit: contain;
 }
 
+/* Inverse l'arrière plan et le met a droite */
 .--right-img-bg {
     right: 0;
 }
 
+/* Image de la div intro__img */
 .intro__img__profil {
     position: relative;
     left: 40%;
@@ -36,15 +41,18 @@
     object-fit: contain;
 }
 
+/* Place l'image du côté gauche de sa div quand l'image doit être du côté droit de la section */
 .--right-img-profil {
     left: 5%;
 }
 
+/* Englobe toute la div intro__about */
 .intro__about {
     width: 40%;
     height: 100%;
 }
 
+/* Theme de la div intro__about */
 .intro__about__theme {
     position: relative;
     padding: 1rem;
@@ -55,12 +63,14 @@
     letter-spacing: 5px;
 }
 
+/* Titre de la div intro__about */
 .intro__about__title {
     padding: 1rem;
     text-align: left;
     font-size: 2.5rem;
 }
 
+/* hr à l'interieur de la div intro__about */
 .intro__about__separation {
     margin: 1rem auto;
     width: 95%;
@@ -69,12 +79,14 @@
     border: none;
 }
 
+/* Texte de présentation de la div intro__about */
 .intro__about__sub {
     text-align: left;
     padding: 1rem;
     font-size: 1.2rem;
 }
 
+/* Place le texte à droite quand la section doit comporter un texte à gauche */
 .--right {
     text-align: right;
 }
@@ -104,15 +116,18 @@
 }
 
 @media screen and (max-width: 1000px) {
+    /* Place les éléments en colonne inversé, pour avoir -> Texte -> Image */
     .intro__container {
         flex-direction: column-reverse;
         height: auto;
     }
 
+    /* La classe qui devait mettre le texte à gauche ne doit plus remplir son rôle à cette taille */
     .--right {
         text-align: left;
     }
 
+    /* La 2ème section est inversé de base, donc ajout d'une classe qui annule l'attribut column reverse ajouté par la classe intro__containter */
     .--not-reversed {
         flex-direction: column;
     }
@@ -131,6 +146,7 @@
         left: 32%;
     }
 
+    /* Suppression de l'arrière plan */
     .intro__img__bg {
         display: none;
     }
