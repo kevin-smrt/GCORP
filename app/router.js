@@ -34,6 +34,11 @@ router.get("/portfolio/famille", (req, res) => {
     res.status(200).sendFile(__dirname + "/views/famille.html");
 });
 
+// Page du portfolio portrait
+router.get("/portfolio/portrait", (req, res) => {
+    res.status(200).sendFile(__dirname + "/views/portrait.html");
+});
+
 // Si aucune route n'est trouvée => 404
 router.use((req, res) => {
     res.status(404).sendFile(__dirname + "/views/404.html");
