@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/index/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <title>Megane Guisnet Photographe</title>
+    <meta name="description"
+        content="Photographe indépendante à Grasse et dans la région PACA. Disponible pour vos mariages, séances en famille et portrait.">
+</head>
+
+<body>
+
+    <%- include ('./partials/header.ejs') %>
+
+    <!-- Main -->
+    <main>
+        <!-- Carousel -->
+        <section class="carousel">
+            <div class="carousel__slider">
+                <div class="carousel__slider__slide carousel__slider__slide--current"></div>
+                <div class="carousel__slider__slide"></div>
+                <div class="carousel__slider__slide"></div>
+                <div class="carousel__slider__slide"></div>
+            </div>
+        </section>
+        <!-- Carousel END -->
+
+        <!-- Intro -->
+        <section class="intro__container">
+
+            <div class="intro__img">
+                <img data-src="/img/about/megane.guisnet.photographe.alpesmaritimes.grasse.jpg"
+                    alt="image de presentation" class="intro__img__bg"></img>
+                <img data-src="/img/about/Megane.Guisnet.Photographe.Alpesmaritimes.Grasse.jpg"
+                    alt="image de presentation" class="intro__img__profil">
+            </div>
+
+            <div class="intro__about">
+                <p class="intro__about__theme">Lumière | Emotions | Souvenirs</p>
+                <h1 class="intro__about__title">Bienvenue, je m'appelle Mégane<br>Je suis photographe à Grasse et dans
+                    les Alpes-Maritimes</h1>
+                <hr class="intro__about__separation">
+                <p class="intro__about__sub">Photographe amoureuse de l'Amour sous toutes ses formes et des couchers de
+                    soleil.<br>Pour les familles complices et les amoureux(ses) passionné(e)s.</p>
+                <p class="intro__about__sub">Disponible à Grasse<br>Dans les Alpes-Maritimes<br>Et partout où vous
+                    souhaitez que je sois.</p>
+                <a href="/presentation" class="intro__about__sub intro__about__more">En savoir plus sur moi</a>
+            </div>
+
+        </section>
+        <!-- Intro END -->
+
+        <!-- Galeries -->
+        <section class="galeries">
+            <div class="galeries__theme">
+                <img class="galeries__theme__img"
+                    data-src="/img/galeries/Meganeguisnet.photographemariage.grasse.alpesmarities.jpg"
+                    alt="image galerie mariage">
+                <a href="#" class="btn btn__galeries">Galerie<br>Mariage</a>
+            </div>
+            <div class="galeries__theme">
+                <img class="galeries__theme__img"
+                    data-src="/img/galeries/meganeguisnet.photographegrossesse.grasse.alpesmaritimes.jpg"
+                    alt="image galerie famille/couple">
+                <a href="#" class="btn btn__galeries">Galerie<br>Famille</a>
+            </div>
+            <div class="galeries__theme">
+                <img class="galeries__theme__img"
+                    data-src="/img/galeries/meganeguisnet.photographe.portrait.grasse.alpesmaritimes.jpg"
+                    alt="image galerie portrait">
+                <a href="#" class="btn btn__galeries">Galerie<br>Portrait</a>
+            </div>
+        </section>
+        <!-- Galeries END -->
+
+        <!-- Contact -->
+        <section class="contact">
+            <div class="contact__container">
+                <p class="contact__description">Je vous conseille, je vous guide avec un regard bienveillant sur la
+                    création de vos souvenirs</p>
+                <a class="btn btn--contact" href="#">écrivez-moi !</a>
+            </div>
+        </section>
+        <!-- Contact END -->
+
+    </main>
+    <!-- Main END -->
+
+    <%- include ('./partials/footer.ejs') %>
+
+    <!-- JS script -->
+    <script src="/js/index/index.js"></script>
+    <script src="/js/menu.js"></script>
+    <script src="/js/index/scrollAnim.js"></script>
+    <script src="/js/footerLazyLoading.js"></script>
+    <!-- JS script END -->
+</body>
+
+</html>
