@@ -22,6 +22,11 @@ const observer = new IntersectionObserver((entries, observer) => {
     threshold: 0.5,
 });
 
-secondSection.forEach((img) => observer.observe(img));
-thirdSection.forEach((img) => observer.observe(img));
-fourthSection.forEach((img) => observer.observe(img));
+function observeAll() {
+    secondSection.forEach((img) => observer.observe(img));
+    thirdSection.forEach((img) => observer.observe(img));
+    fourthSection.forEach((img) => observer.observe(img));
+}
+
+// Timeout pour éviter le chargement d'image au chargement de la page à cause d'un "bug"
+setTimeout(observeAll, 500);
