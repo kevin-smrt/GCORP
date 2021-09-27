@@ -6,7 +6,7 @@ const router = Router();
 
 // Page d'accueil
 router.get("/", (req, res) => {
-    res.status(200).sendFile(__dirname + "/views/index.html");
+    res.status(200).render('index');
 });
 
 // Page de présentation
