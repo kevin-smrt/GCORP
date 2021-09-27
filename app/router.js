@@ -29,6 +29,11 @@ router.get("/portfolio/mariage", (req, res) => {
     res.status(200).sendFile(__dirname + "/views/mariage.html");
 });
 
+// Page du portfolio famille
+router.get("/portfolio/famille", (req, res) => {
+    res.status(200).sendFile(__dirname + "/views/famille.html");
+});
+
 // Si aucune route n'est trouvée => 404
 router.use((req, res) => {
     res.status(404).sendFile(__dirname + "/views/404.html");
