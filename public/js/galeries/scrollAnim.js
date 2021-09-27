@@ -13,8 +13,8 @@ const observer = new IntersectionObserver((entries, observer) => {
             // Evite le lag
             if (!entry.target.src) {
                 entry.target.src = entry.target.dataset.src;
+                entry.target.classList.add('appears');
             }
-            entry.target.classList.add('appears');
         }
     });
 }, {
