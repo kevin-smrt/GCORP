@@ -1,0 +1,120 @@
+.spacer {
+    padding-top: 120px;
+}
+
+.spacer-min {
+    margin: .2rem;
+}
+
+.gallery {
+    display: grid;
+    height: auto;
+    width: 90%;
+    margin: 0 auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+        "img1 img2 img3 big1"
+        "img4 img5 big2 big1"
+        "img6 big3 big2 img7"
+        "big4 big3 img8 img9"
+        "big4 img10 img11 img12";
+    gap: .2rem;
+}
+
+.gallery img {
+    background-color: rgba(255, 221, 190, 1);;
+    max-width: 100%;
+    height: 100%;
+    opacity: 0;
+    object-fit: cover;
+}
+
+#section1 img {
+    opacity: 1;
+}
+
+.img-1 {
+    grid-area:  img1;
+}
+
+.img-2 {
+    grid-area:  img2;
+}
+
+.img-3 {
+    grid-area:  img3;
+}
+
+.img-4 {
+    grid-area:  img4;
+}
+
+.img-5 {
+    grid-area:  img5;
+}
+
+.img-6 {
+    grid-area:  img6;
+}
+
+.img-7 {
+    grid-area:  img7;
+}
+
+.img-8 {
+    grid-area:  img8;
+}
+
+.img-9 {
+    grid-area:  img9;
+}
+
+.img-10 {
+    grid-area:  img10;
+}
+
+.img-11 {
+    grid-area:  img11;
+}
+
+.img-12 {
+    grid-area:  img12;
+}
+
+.big-1 {
+    grid-area:  big1;
+}
+
+.big-2 {
+    grid-area:  big2;
+}
+
+.big-3 {
+    grid-area:  big3;
+}
+
+.big-4 {
+    grid-area:  big4;
+}
+
+@media screen and (max-width: 1000px) {
+    .gallery {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+            "img1 big1"
+            "img2 big1"
+            "img3 img4"
+            "big2 img5"
+            "big2 img6"
+            "img7 img8"
+            "img9 big3"
+            "img10 big3"
+            "img11 img12";
+    }
+
+    .big-4 {
+        display: none;
+    }
+}
