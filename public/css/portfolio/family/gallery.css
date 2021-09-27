@@ -14,11 +14,11 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas: 
-        "img1 img2 img3 big1"
-        "img4 img5 big2 big1"
-        "img6 big3 big2 img7"
-        "big4 big3 img8 img9"
-        "big4 img10 img11 img12";
+        "big1 img1 img2 big2"
+        "big1 img3 img4 big2"
+        "img5 big3 big4 img6"
+        "img7 big3 big4 img8"
+        "img9 img10 img11 img12";
     gap: .2rem;
 }
 
