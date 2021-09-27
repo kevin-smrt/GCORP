@@ -39,6 +39,11 @@ router.get("/portfolio/portrait", (req, res) => {
     res.status(200).render('portrait');
 });
 
+// Page du portfolio portrait
+router.get("/mentions-legales", (req, res) => {
+    res.status(200).render('legals');
+});
+
 // Si aucune route n'est trouvée => 404
 router.use((req, res) => {
     res.status(404).sendFile(__dirname + "/views/404.html");
