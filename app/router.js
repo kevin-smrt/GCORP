@@ -11,32 +11,32 @@ router.get("/", (req, res) => {
 
 // Page de présentation
 router.get("/presentation", (req, res) => {
-    res.status(200).sendFile(__dirname + "/views/presentation.html");
+    res.status(200).render('presentation');
 });
 
 // Page de contact
 router.get("/contact", (req, res) => {
-    res.status(200).sendFile(__dirname + "/views/contact.html");
+    res.status(200).render('contact');
 });
 
 // Page d'informations
 router.get("/informations", (req, res) => {
-    res.status(200).sendFile(__dirname + "/views/informations.html");
+    res.status(200).render('informations');
 });
 
 // Page du portfolio mariage
 router.get("/portfolio/mariage", (req, res) => {
-    res.status(200).sendFile(__dirname + "/views/mariage.html");
+    res.status(200).render('mariage');
 });
 
 // Page du portfolio famille
 router.get("/portfolio/famille", (req, res) => {
-    res.status(200).sendFile(__dirname + "/views/famille.html");
+    res.status(200).render('famille');
 });
 
 // Page du portfolio portrait
 router.get("/portfolio/portrait", (req, res) => {
-    res.status(200).sendFile(__dirname + "/views/portrait.html");
+    res.status(200).render('portrait');
 });
 
 // Si aucune route n'est trouvée => 404
