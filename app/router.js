@@ -44,6 +44,9 @@ router.get("/mentions-legales", (req, res) => {
     res.status(200).render('legals');
 });
 
+router.get("/client", (req, res) => {
+    res.status(200).render('client');
+});
 // Si aucune route n'est trouvée => 404
 router.use((req, res) => {
     res.status(404).sendFile(__dirname + "/views/404.html");
