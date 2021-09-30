@@ -1,5 +1,7 @@
 // Récupère la classe Router du module express
 const { Router } = require("express");
+// Récupère le controller qui gère les mails
+const mailController = require('./controllers/mailController');
 
 // Initialisation du router
 const router = Router();
@@ -44,9 +46,14 @@ router.get("/mentions-legales", (req, res) => {
     res.status(200).render('legals');
 });
 
+// Page des galleries privées clients
 router.get("/client", (req, res) => {
     res.status(200).render('client');
 });
+
+// Route pour envoyer un mail
+router.post('/mail', mailController.sendMail);
+
 // Si aucune route n'est trouvée => 404
 router.use((req, res) => {
     res.status(404).sendFile(__dirname + "/views/404.html");
