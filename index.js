@@ -5,6 +5,11 @@ const ejs = require("ejs");
 const PORT = 3000;
 const app = express();
 
+// On ajoute notre middleware qui intercept les données envoyer sous format urlencoded et les mets dans le body
+app.use(express.urlencoded({
+    extended: true
+}));
+
 // on définit le dossier des ressources statiques
 app.use(express.static("./public"));
 
