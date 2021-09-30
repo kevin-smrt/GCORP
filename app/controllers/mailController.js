@@ -1,7 +1,9 @@
+// Récupère les variables d'environnement
 require('dotenv').config();
-const { google } = require('googleapis');
+// Récupère le module nodemailer
 const nodemailer = require('nodemailer');
 
+// Crée le transporter, celui qui va envoyer le mail
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
@@ -11,6 +13,7 @@ const transporter = nodemailer.createTransport({
 });
 
 const mailController = {
+    // Créé options qui vont être envoyé par le transporteur
     createOption: function(infos) {
         let mailOptions = {
             from: infos.clientEmail,
@@ -24,12 +27,12 @@ const mailController = {
                 Lieu et date du mariage : ${infos.weddingPlace ? infos.weddingPlace : 'pas renseigné'}, ${infos.weddingDate ? infos.weddingDate : 'pas renseignée'}\n\n
                 ${infos.clientDetails}`,
         }
-
         return mailOptions;
     },
 
+    // Fonction d'envoi de mail
     sendMail: function (req, res) {
-
+        // Récupère toutes les données du formulaire de contact
         const infos = {
             presta: req.body.presta,
             clientName: req.body.name,
@@ -40,6 +43,7 @@ const mailController = {
             clientDetails: req.body.details
         };
 
+        // Envoie du mail
         transporter.sendMail(mailController.createOption(infos), (err, data) => {
             if (err) {
                 console.error(err);
