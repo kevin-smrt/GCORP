@@ -13,7 +13,7 @@ const transporter = nodemailer.createTransport({
 });
 
 const mailController = {
-    // Créé options qui vont être envoyé par le transporteur
+    // Créé les options qui vont être envoyés par le transporteur
     createOption: function(infos) {
         let mailOptions = {
             from: infos.clientEmail,
@@ -25,7 +25,7 @@ const mailController = {
                 Mail : ${infos.clientEmail}\n
                 Numéro de téléphone : ${infos.clientTel ? infos.clientTel : 'pas renseigné'}\n
                 Lieu et date du mariage : ${infos.weddingPlace ? infos.weddingPlace : 'pas renseigné'}, ${infos.weddingDate ? infos.weddingDate : 'pas renseignée'}\n\n
-                ${infos.clientDetails}`,
+                Message : \n${infos.clientDetails}`,
         }
         return mailOptions;
     },
