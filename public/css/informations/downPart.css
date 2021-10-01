@@ -17,9 +17,9 @@
 
 input[type=radio] {
     position: relative;
-    top: 100%;
+    top: 110%;
     left: 50%;
-    transform: translateX(-400%);
+    transform: translateX(-50%);
     opacity: 0.4;
     cursor: pointer;
 }
@@ -149,7 +149,11 @@ input[type=radio]:checked {
 }
 
 @media screen and (max-width: 450px) {
+    .down-part {
+        height: 250px;
+    }
+
     #slider label, #slider_bis label, #slider_ter label {
-        font-size: .7rem;
+        height: 100%;
     }
 }
