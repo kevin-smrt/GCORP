@@ -1,15 +1,14 @@
 // Récupère les éléments qui vont s'activer au scroll
 const weddingPicture = document.querySelector('#mariage .picture-container');
 const weddingText = document.querySelector('#mariage .text-container');
-const weddingTestimonial = document.querySelector('.wedding-slider');
 
 const familyPicture = document.querySelector('#famille .picture-container');
 const familyText = document.querySelector('#famille .text-container');
-const familyTestimonial = document.querySelector('.family-slider');
 
 const portraitPicture = document.querySelector('#portrait .picture-container');
 const portraitText = document.querySelector('#portrait .text-container');
-const portraitTestimonial = document.querySelector('.portrait-slider');
+
+const allPartDown = document.querySelectorAll('.down-part');
 
 // Création d'une instance de l'API intersection observer
 const observer = new IntersectionObserver((entries, observer) => {
@@ -27,16 +26,8 @@ const observer = new IntersectionObserver((entries, observer) => {
                     entry.target.classList.add('slide_right');
                     break;
 
-                case "wedding-slider":
-                    entry.target.classList.add('slide_bot');
-                    break;
-
-                case "family-slider":
-                    entry.target.classList.add('slide_bot');
-                    break;
-
-                case "portrait-slider":
-                    entry.target.classList.add('slide_bot');
+                case "down-part":
+                    entry.target.classList.add('appears');
                     break;
 
                 default:
@@ -51,12 +42,11 @@ const observer = new IntersectionObserver((entries, observer) => {
 
 observer.observe(weddingPicture);
 observer.observe(weddingText);
-observer.observe(weddingTestimonial);
 
 observer.observe(familyPicture);
 observer.observe(familyText);
-observer.observe(familyTestimonial);
 
 observer.observe(portraitPicture);
 observer.observe(portraitText);
-observer.observe(portraitTestimonial);
+
+allPartDown.forEach(partDown => observer.observe(partDown));
