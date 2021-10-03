@@ -31,3 +31,16 @@
         height: 100px;
     }
 }
+
+@media screen and (max-width: 850px) {
+    .footer__insta__img {
+        width: 12%;
+        height: 100px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .footer__insta__img {
+        height: 50px;
+    }
+}
