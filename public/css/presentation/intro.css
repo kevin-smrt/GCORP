@@ -1,3 +1,7 @@
+.spacer-min {
+    margin: 5rem;
+}
+
 /* Englobe toute la section intro */
 .intro__container {
     font-family: 'Cormorant Garamond', serif;
@@ -5,7 +9,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 700px;
+    height: auto;
     width: 100%;
 }
 
@@ -20,8 +24,8 @@
 /* Arrière plan de la div intro__img */
 .intro__img__bg {
     position: absolute;
-    top: 300px;
-    height: 50%;
+    top: 250px;
+    height: 70%;
     width: 70%;
     object-fit: contain;
 }
@@ -35,7 +39,6 @@
 .intro__img__profil {
     position: relative;
     left: 40%;
-    top: 100px;
     height: 70%;
     width: 50%;
     object-fit: contain;
@@ -115,7 +118,7 @@
     }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1400px) {
     /* Place les éléments en colonne inversé, pour avoir -> Texte -> Image */
     .intro__container {
         flex-direction: column-reverse;
