@@ -28,7 +28,6 @@ function observeAll() {
     // La galerie portrait ne comporte pas de 4eme section, donc je vérifie qu'elle contient bien des éléments avant de l'observer
     if (fourthSection.length) {
         fourthSection.forEach((img) => observer.observe(img));
-        console.log("oui");
     }
 }
 
