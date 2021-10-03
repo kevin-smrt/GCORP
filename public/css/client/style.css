@@ -10,3 +10,37 @@
 .spacer {
     padding-top: 120px;
 }
+
+.spacer-min {
+    padding-top: 60px;
+}
+
+.client__intro {
+    font-family: 'Cormorant Garamond', serif;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.client__intro__title {
+    font-size: 1.7rem;
+    font-weight: 400;
+    color: rgb(248, 170, 97);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 1rem;
+}
+
+.client__intro__sub {
+    padding: 1rem;
+    font-size: 1.2rem;
+}
+
+.client__intro__link {
+    text-decoration: underline;
+    color: rgb(248, 170, 97);
+}
+
+.--little {
+    font-size: .9rem;
+}
