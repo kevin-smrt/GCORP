@@ -31,26 +31,27 @@ const mailController = {
     },
 
     // Fonction d'envoi de mail
-    sendMail: function (req, res) {
-        // Récupère toutes les données du formulaire de contact
-        const infos = {
-            presta: req.body.presta,
-            clientName: req.body.name,
-            clientEmail: req.body.email,
-            clientTel: req.body.tel,
-            weddingPlace: req.body.place,
-            weddingDate: req.body.date,
-            clientDetails: req.body.details
-        };
+    sendMail: async function (req, res, next) {
+        try {
+            // Récupère toutes les données du formulaire de contact
+            const infos = {
+                presta: req.body.presta,
+                clientName: req.body.name,
+                clientEmail: req.body.email,
+                clientTel: req.body.tel,
+                weddingPlace: req.body.place,
+                weddingDate: req.body.date,
+                clientDetails: req.body.details
+            };
 
-        // Envoie du mail
-        transporter.sendMail(mailController.createOption(infos), (err, data) => {
-            if (err) {
-                console.error(err);
-            } else {
-                res.redirect('/');
-            }
-        });
+            // Envoie du mail
+            const result = await transporter.sendMail(mailController.createOption(infos));
+
+            res.send(result);
+
+        } catch (error) {
+            res.status(500).send(err);
+        }
     },
 };
 
