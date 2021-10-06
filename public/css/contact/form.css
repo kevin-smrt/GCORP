@@ -62,6 +62,11 @@ textarea {
     font-weight: 700;
 }
 
+
+.g-recaptcha {
+    margin: 1rem;
+}
+
 @media screen and (max-width: 1400px) {
     /* Dispose la section en colonne et inverse les positions des informations de contact et du formulaire */
     .form {
@@ -77,6 +82,10 @@ textarea {
 
 @media screen and (max-width: 650px) {
     input, select, textarea, label {
+        margin: .5rem;
+    }
+
+    .g-recaptcha {
         margin: .5rem;
     }
 
