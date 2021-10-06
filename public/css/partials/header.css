@@ -48,7 +48,6 @@
 
 /* Liens du menu du header */
 .menu__link {
-    cursor: pointer;
     height: 100px;
     display: inline-block;
 }
@@ -145,6 +144,14 @@
         position: absolute;
         width: 100%;
         left: 0;
+    }
+
+    /* Cible les categories portfolio et informations pour afficher le sous-menu au survol et de rester afficher tant qu'il est focus */
+    .menu__cell--active:focus .menu__sub,
+    .menu__cell--active:hover .menu__sub,
+    .menu__cell--active:focus-within .menu__sub {
+        transform: translateY(-80%);
+        opacity: 1;
     }
 
     /* Etend les elements du menu pour que ce soit plus facilement cliquable */
