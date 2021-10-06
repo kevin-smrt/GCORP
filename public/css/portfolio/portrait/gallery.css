@@ -27,6 +27,7 @@
     height: 100%;
     opacity: 0;
     object-fit: cover;
+    object-position: center;
 }
 
 #section1 img {
@@ -55,6 +56,10 @@
 
 .img-6 {
     grid-area:  img6;
+}
+
+.big-1, .big-2, .big-3 {
+    height: auto !important;
 }
 
 .big-1 {
