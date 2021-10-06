@@ -83,10 +83,6 @@
     grid-area:  img12;
 }
 
-.big-1, .big-2, .big-3, .big-4 {
-    height: auto !important;
-}
-
 .big-1 {
     grid-area:  big1;
 }
@@ -122,4 +118,9 @@
     .big-4 {
         display: none;
     }
+
+    .big-1, .big-2, .big-3, .big-4 {
+        height: auto !important;
+    }
+
 }
