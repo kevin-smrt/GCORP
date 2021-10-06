@@ -24,7 +24,7 @@
 
 .gallery img {
     background-color: rgba(255, 221, 190, 1);;
-    max-width: 100%;
+    width: 100%;
     height: 100%;
     opacity: 0;
     object-fit: cover;
@@ -119,7 +119,7 @@
         display: none;
     }
 
-    .big-1, .big-2, .big-3, .big-4 {
+    .big-1, .big-2, .big-3 {
         height: auto !important;
     }
 
