@@ -47,9 +47,9 @@ const mailController = {
             };
 
             // Envoie du mail
-            const result = await transporter.sendMail(mailController.createOption(infos));
+            await transporter.sendMail(mailController.createOption(infos));
 
-            res.send(result);
+            res.redirect("/");
 
         } catch (error) {
             res.status(500).send(err);
