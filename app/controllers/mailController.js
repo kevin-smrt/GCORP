@@ -6,7 +6,7 @@ const nodemailer = require('nodemailer');
 // Crée le transporter, celui qui va envoyer le mail
 const transporter = nodemailer.createTransport({
     service: 'gmail',
-    port: 80,
+    port: 465,
     secure: true,
     auth: {
         user: process.env.MAIL,
