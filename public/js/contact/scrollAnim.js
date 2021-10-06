@@ -29,7 +29,7 @@ const observer = new IntersectionObserver((entries, observer) => {
     });
 }, {
     // Definit le pourcentage de visibilité pour déclenché l'action
-    threshold: 0.5,
+    threshold: 0.01,
 });
 
 observer.observe(mainHeader);
