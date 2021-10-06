@@ -98,8 +98,8 @@ textarea {
 
 @media screen and (max-width: 500px) {
     textarea {
-        min-width: 15rem;
-        max-width: 15rem;
+        min-width: 20rem;
+        max-width: 20rem;
     }
 
     /* Dispose les informations lorsque le select est sur mariage, en colonne */
