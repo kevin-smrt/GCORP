@@ -1,3 +1,4 @@
+console.log("JE SUIS RENTRER")
 // Récupère les variables d'environnement
 require('dotenv').config();
 // Récupère le module nodemailer
