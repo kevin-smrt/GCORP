@@ -2,6 +2,7 @@
 require('dotenv').config();
 // Récupère le module nodemailer
 const nodemailer = require('nodemailer');
+console.log("Nodemailer : " + nodemailer);
 
 // Crée le transporter, celui qui va envoyer le mail
 const transporter = nodemailer.createTransport({
@@ -11,6 +12,8 @@ const transporter = nodemailer.createTransport({
         pass: process.env.PASSWORD
     }
 });
+
+console.log("transporter created: " + transporter);
 
 const mailController = {
     // Créé les options qui vont être envoyés par le transporteur
@@ -27,11 +30,13 @@ const mailController = {
                 Lieu et date du mariage : ${infos.weddingPlace ? infos.weddingPlace : 'pas renseigné'}, ${infos.weddingDate ? infos.weddingDate : 'pas renseignée'}\n\n
                 Message : \n${infos.clientDetails}`,
         }
+        console.log("options created: " + mailOptions);
         return mailOptions;
     },
 
     // Fonction d'envoi de mail
     sendMail: function (req, res) {
+        console.log("Enter sendMail function");
         // Récupère toutes les données du formulaire de contact
         const infos = {
             presta: req.body.presta,
@@ -43,11 +48,15 @@ const mailController = {
             clientDetails: req.body.details
         };
 
+        console.log("info created : "+ infos);
+
         // Envoie du mail
         transporter.sendMail(mailController.createOption(infos), (err, data) => {
             if (err) {
+                console.log("all not good du tout");
                 console.error(err);
             } else {
+                console.log("all good");
                 res.redirect('/');
             }
         });
