@@ -1,7 +1,8 @@
+require('dotenv').config();
+const { RecaptchaEnterpriseServiceClient } = require('@google-cloud/recaptcha-enterprise');
 const express = require("express");
 const router = require("../app/router");
 const ejs = require("ejs");
-const captchaClient = require("../app/captcha");
 
 const PORT = 3000;
 const app = express();
@@ -17,7 +18,24 @@ app.use(express.static("./public"));
 app.set('view engine', 'ejs');
 app.set("views", "app/views");
 
-// app.use(captchaClient);
+
+const client = new RecaptchaEnterpriseServiceClient({
+    credentials: {
+        client_email: process.env.GOOGLE_RECAPTCHA_EMAIL,
+        // https://github.com/auth0/node-jsonwebtoken/issues/642#issuecomment-585173594
+        private_key: process.env.GOOGLE_RECAPTCHA_PRIVATE_KEY.replace(/\\n/gm, '\n')
+    },
+    projectId: process.env.GOOGLE_RECAPTCHA_PROJECT_ID,
+});
+
+client.initialize();
+
+// app is your express server, app = express();
+app.set('captcha', {
+    client: client,
+    key: process.env.GOOGLE_RECAPTCHA_SITE_KEY,
+    projectId: process.env.GOOGLE_RECAPTCHA_PROJECT_ID
+});
 
 app.use(router);
 
