@@ -55,6 +55,13 @@ const mailController = {
             res.status(500).send(err);
         }
     },
+
+    routeRecaptcha: async (req, res) => {
+        let captcha = req.app.get('captcha');
+        console.log(captcha);
+        mailController.sendMail();
+    }
+
 };
 
 module.exports = mailController;
