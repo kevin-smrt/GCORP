@@ -52,7 +52,7 @@ router.get("/client", (req, res) => {
 });
 
 // Route pour envoyer un mail
-router.post("/mail", mailController.routeRecaptcha);
+router.post("/mail", mailController.verifyCaptcha);
 
 // Si aucune route n'est trouvée => 404
 router.use((req, res) => {
