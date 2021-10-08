@@ -6,7 +6,7 @@ Créer un serveur `express` avec `node.js` et créer un site pour photographe, a
 [Cliquez ici](https://meganeguisnet.com/) pour voir le site terminé.
 
 ## ⌨️ Les dépendances
-`express` `ejs` `intersection observer` `dotenv` `nodemailer`
+`express` `ejs` `intersection observer` `dotenv` `nodemailer` `axios` `@google-cloud/recaptcha-enterprise` `@google-cloud/recaptcha-enterprise`
 
 ## 📑 Les étapes
 Commencer par initialiser le serveur `npm init` et installer les dépendances.
