@@ -3,6 +3,8 @@
 ## 🎯 But du projet
 Créer un serveur `express` avec `node.js` et créer un site pour photographe, avec des galeries pour chacune des categories.
 
+[Cliquez ici](https://meganeguisnet.com/) pour voir le site terminé.
+
 ## ⌨️ Les dépendances
 `express` `ejs` `intersection observer` `dotenv` `nodemailer`
 
