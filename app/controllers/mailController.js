@@ -59,7 +59,7 @@ const mailController = {
             let data = response.data;
 
             // Si la variable succès est false, ou le score en dessous de .4 => c'est un bot
-            if (!data.success || data.score < 0.4) {
+            if (!data.success) {
                 return res.json({"msg": `Vous avez été considéré(e) comme un robot, veuillez m'envoyer un message sur instagram si vous êtes une personne réelle`});
             }
 
