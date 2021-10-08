@@ -49,7 +49,7 @@ Je vais faire une vidéo tutoriel pour expliquer comment j'ai procédé, et je v
 ### Mettre le site en ligne
 
 Vers la fin du projet, je me suis posé la question suivante :
-> Comment mon serveur peut être actif 24h/24 si je dois manuellement le démarrer ?
+> Comment mon serveur peut être actif 24h/24 si je dois manuellement le démarrer à chaque fois ?
 
 Une fois n'est pas coutume, je suis allé me renseigner sur la toile. J'ai très vite trouvé la solution, je devais utiliser un serveur qui ne s'éteint jamais. Les serveurs virtuels (VPS) ont été créés pour ça, mais il restait un problème, je n'ai jamais touché à un serveur de près ou de loin.
 
