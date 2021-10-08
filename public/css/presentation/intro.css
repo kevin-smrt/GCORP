@@ -94,6 +94,11 @@
     text-align: right;
 }
 
+/* Enleve les marges */
+.--no-margin {
+    margin: 0;
+}
+
 @media screen and (max-width: 1450px) {
     .intro__about__theme {
         font-size: 1.7rem;
