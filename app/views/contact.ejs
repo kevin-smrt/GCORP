@@ -11,6 +11,7 @@
         <title>Megane Guisnet - Contact</title>
         <meta name="description"
             content="Pour vos photos de mariages, de familles ou portraits à Grasse, dans les Alpes-Maritimes n'hésitez pas à me contacter.">
+        <script src="https://www.google.com/recaptcha/api.js?render=6LeAZ7UcAAAAADPAwYZK8IRRIDUE6UjHFbLztyd_"></script>
     </head>
     <body>
         
@@ -29,7 +30,7 @@
 
             <!-- Form -->
             <section class="form">
-                <form class="form-container" action="/mail" method="post">
+                <form class="form-container">
 
                     <div class="form__select">
                         <label for="presta">Quelle prestation t'interesse ?*</label>
@@ -44,8 +45,8 @@
                     </div>
 
                     <div class="form__infos">
-                        <input type="text" name="name" autocomplete="off" placeholder="Nom et Prénom*" required>
-                        <input type="email" name="email" autocomplete="off" placeholder="Email*" required>
+                        <input type="text" name="name" id="name" autocomplete="off" placeholder="Nom et Prénom*" required>
+                        <input type="email" name="email" id="email" autocomplete="off" placeholder="Email*" required>
                         <input type="tel" name="tel" autocomplete="off" placeholder="Téléphone">
                     </div>
 
@@ -55,11 +56,9 @@
                     </div>
 
                     <div class="form__details">
-                        <textarea name="details"
+                        <textarea name="details" id="details"
                             placeholder="Raconte moi tes envies! N'hésite pas a détailler, j'en ai besoin pour mieux te répondre*"
                             required></textarea>
-                        <!-- <div class="g-recaptcha" data-sitekey="6Lc-1bQcAAAAAHsrPGPHwJNsmv32kv_FTsvq8RUE"></div> -->
-                        <script src=”//www.google.com/recaptcha/enterprise.js?render=6Lc-1bQcAAAAAHsrPGPHwJNsmv32kv_FTsvq8RUE"></script>
                         <button type="submit" class="form__details__submit">Envoyer</button>
                     </div>
                 </form>
@@ -94,6 +93,7 @@
 
         <!-- JS script -->
         <script src="/js/contact/scrollAnim.js"></script>
+        <script src="/js/contact/captcha.js"></script>
         <script src="/js/contact/index.js"></script>
         <script src="/js/menu.js"></script>
         <script src="/js/footerLazyLoading.js"></script>
