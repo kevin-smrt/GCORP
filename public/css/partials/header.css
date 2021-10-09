@@ -9,6 +9,7 @@
     background-repeat: no-repeat;
     background-image: url(/img/about/background.webp);
     background-attachment: fixed;
+    overflow-x: hidden;
  }
 
 /* Header du menu */
