@@ -1,7 +1,7 @@
 /* Cible la partie basse de la section */
 .down-part {
     height: 300px;
-    width: 100vw;
+    width: 100%;
 }
 
 /* Cible la div qui englobe tout les avis */
