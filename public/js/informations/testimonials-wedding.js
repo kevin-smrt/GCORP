@@ -18,7 +18,7 @@ const name2 = "Amandine & Kévin";
 const name3 = "Noémie & Nicolas";
 
 // Créations des dates
-const date1 = "Mariage : 26 Juine 2021";
+const date1 = "Mariage : 26 Juin 2021";
 const date2 = "Mariage : 12 Septembre 2020";
 const date3 = "Mariage : 7 Aout 2021";
 
