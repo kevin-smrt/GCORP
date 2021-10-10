@@ -1,159 +1,136 @@
 /* Cible la partie basse de la section */
 .down-part {
+    width: 100%;
+}
+
+#mariage .down-part {
     height: 300px;
-    width: 100%;
 }
 
-/* Cible la div qui englobe tout les avis */
-#slider, #slider_bis, #slider_ter {
-    position: relative;
+#famille .down-part {
+    height: 350px;
+}
+
+#portrait .down-part {
+    height: 250px;
+}
+
+.testimonial-container {
+    font-family: 'Cormorant Garamond', serif;
+    height: auto;
     width: 50%;
-    height: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    perspective: 1400px;
-    transform-style: preserve-3d;
-}
-
-input[type=radio] {
-    position: relative;
-    top: 110%;
-    left: 50%;
-    transform: translateX(-50%);
-    opacity: 0.4;
-    cursor: pointer;
-}
-
-input[type=radio]:checked {
-    opacity: 1;
-}
-
-/* Cible les labels des div slider */
-#slider label, #slider_bis label, #slider_ter label {
-    position: absolute;
-    padding: 1rem;
-    width: 100%;
-    height: 85%;
-    left: 0;
-    top: 0;
+    margin: 0 auto;
+    border-radius: 2px;
+    background-color: white;
     border-top: 1px solid rgb(250, 214, 180);
-    font-size: 1.3rem;
-    color: black;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    user-select: none;
-    transition: transform 400ms ease;
-}
-
-/* Ajoute un fond blanc sur tout les slide */
-#slide1, #slide1_bis, #slide1_ter {
-    background: white;
-}
-
-#slide2, #slide2_bis, #slide2_ter {
-    background: white;
-}
-  
-#slide3, #slide3_bis, #slide3_ter {
-    background: white;
-}
-  
-#slide4, #slide4_bis, #slide4_ter {
-    background: white;
-}
-  
-#slide5, #slide5_bis, #slide5_ter {
-    background: white;
-}
-
-/*
-    Cible toute les possibilité (si 1er input check etc..)  
-*/
-
-#s1:checked ~ #slide1, #s2:checked ~ #slide2, #s3:checked ~ #slide3, #s4:checked ~ #slide4, #s5:checked ~ #slide5,
-#a1:checked ~ #slide1_bis, #a2:checked ~ #slide2_bis, #a3:checked ~ #slide3_bis, #a4:checked ~ #slide4_bis, #a5:checked ~ #slide5_bis,
-#b1:checked ~ #slide1_ter, #b2:checked ~ #slide2_ter, #b3:checked ~ #slide3_ter, #b4:checked ~ #slide4_ter, #b5:checked ~ #slide5_ter {
-    transform: translate3d(0%, 0, 0px);
     box-shadow: 0 13px 26px rgba(0,0,0, 0.3), 0 12px 6px rgba(0,0,0, 0.2);
 }
 
-#s1:checked ~ #slide2, #s2:checked ~ #slide3, #s3:checked ~ #slide4, #s4:checked ~ #slide5, #s5:checked ~ #slide1,
-#a1:checked ~ #slide2_bis, #a2:checked ~ #slide3_bis, #a3:checked ~ #slide4_bis, #a4:checked ~ #slide5_bis, #a5:checked ~ #slide1_bis,
-#b1:checked ~ #slide2_ter, #b2:checked ~ #slide3_ter, #b3:checked ~ #slide4_ter, #b4:checked ~ #slide5_ter, #b5:checked ~ #slide1_ter {
-    transform: translate3d(30%, 0, -200px);
-    opacity: 0.8;
+.testimonial-bloc {
+    padding: 2rem;
+    transition: all .2s ease;
+    opacity: 0;
+    transition: opacity .2s;
+}
+
+.testimonial-text {
+    font-size: 1.1rem;
+}
+
+.testimonial-name {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-top: 1rem;
+    color: rgb(250, 214, 180);
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.295);
+}
+
+.testimonial-img {
+    position: relative;
+    margin-bottom: 1rem;
+    left: 90%;
+    width: 30px;
+}
+
+.show {
+    opacity: 1 !important;
+}
+
+.testimonial-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.arrow-btn {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
     border: none;
-    box-shadow: 0 6px 10px rgba(0,0,0, 0.3), 0 2px 2px rgba(0,0,0, 0.2);
+    border-radius: 50%;
+    background-color: rgb(250, 214, 180);
 }
 
-#s1:checked ~ #slide3, #s2:checked ~ #slide4, #s3:checked ~ #slide5, #s4:checked ~ #slide1, #s5:checked ~ #slide2,
-#a1:checked ~ #slide3_bis, #a2:checked ~ #slide4_bis, #a3:checked ~ #slide5_bis, #a4:checked ~ #slide1_bis, #a5:checked ~ #slide2_bis,
-#b1:checked ~ #slide3_ter, #b2:checked ~ #slide4_ter, #b3:checked ~ #slide5_ter, #b4:checked ~ #slide1_ter, #b5:checked ~ #slide2_ter {
-    transform: translate3d(60%, 0, -350px);
-    opacity: 0.3;
-    border: none;
-    box-shadow: 0 1px 4px rgba(0,0,0, 0.4);
+.arrow {
+    display: inline-block;
+    padding: 3px;
+    border-style:solid;
+    border-width: 0 2px 2px 0;
 }
 
-#s1:checked ~ #slide4, #s2:checked ~ #slide5, #s3:checked ~ #slide1, #s4:checked ~ #slide2, #s5:checked ~ #slide3,
-#a1:checked ~ #slide4_bis, #a2:checked ~ #slide5_bis, #a3:checked ~ #slide1_bis, #a4:checked ~ #slide2_bis, #a5:checked ~ #slide3_bis,
-#b1:checked ~ #slide4_ter, #b2:checked ~ #slide5_ter, #b3:checked ~ #slide1_ter, #b4:checked ~ #slide2_ter, #b5:checked ~ #slide3_ter {
-    transform: translate3d(-60%, 0, -350px);
-    opacity: 0.3;
-    border: none;
-    box-shadow: 0 1px 4px rgba(0,0,0, 0.4);
+.--arrow-left {
+    transform: rotate(135deg);
 }
 
-#s1:checked ~ #slide5, #s2:checked ~ #slide1, #s3:checked ~ #slide2, #s4:checked ~ #slide3, #s5:checked ~ #slide4
-#a1:checked ~ #slide5_bis, #a2:checked ~ #slide1_bis, #a3:checked ~ #slide2_bis, #a4:checked ~ #slide3_bis, #a5:checked ~ #slide4_bis,
-#b1:checked ~ #slide5_ter, #b2:checked ~ #slide1_ter, #b3:checked ~ #slide2_ter, #b4:checked ~ #slide3_ter, #b5:checked ~ #slide4_ter {
-    transform: translate3d(-30%, 0, -200px);
-    opacity: 0.8;
-    border: none;
-    box-shadow: 0 6px 10px rgba(0,0,0, 0.3), 0 2px 2px rgba(0,0,0, 0.2);
+.--arrow-right {
+    transform: rotate(-45deg);
 }
 
-
-@media screen and (max-width: 1400px) {
-    #slider label, #slider_bis label, #slider_ter label {
-        font-size: 1rem;
-        padding: .5rem;
-    }
-}
-
-@media screen and (max-width: 1100px) {
-    .down-part {
-        height: 300px;
-    }
-
-    #slider, #slider_bis, #slider_ter {
+@media screen and (max-width: 1550px) {
+    .testimonial-container {
         width: 70%;
     }
 }
 
-@media screen and (max-width: 600px) {
-    .down-part {
-        height: 200px;
-    }
-
-    #slider label, #slider_bis label, #slider_ter label {
-        font-size: .8rem;
-    }
-
-    #slider, #slider_bis, #slider_ter {
+@media screen and (max-width: 1100px) {
+    .testimonial-container {
         width: 80%;
+    }
+
+    #mariage .down-part {
+        height: 350px;
+    }
+
+    .testimonial-text {
+        font-size: 1rem;
     }
 }
 
-@media screen and (max-width: 450px) {
-    .down-part {
-        height: 250px;
+@media screen and (max-width: 850px) {
+    .testimonial-container {
+        width: 90%;
     }
 
-    #slider label, #slider_bis label, #slider_ter label {
-        height: 100%;
+    .testimonial-text {
+        font-size: .9rem;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .testimonial-bloc {
+        padding: 1rem;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    #portrait .down-part {
+        height: 300px;
+    }
+
+    #famille .down-part {
+        height: 400px;
     }
 }
