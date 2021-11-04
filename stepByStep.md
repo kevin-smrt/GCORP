@@ -55,7 +55,7 @@ Une fois n'est pas coutume, je suis allé me renseigner sur la toile. J'ai très
 
 Un problème ? **Une chance !** J'ai pu découvrir toute une partie du métier de développeur que je ne connaissais pas, l'administration système (AdminSys). Après avoir acheté un serveur, j'ai appris à le configurer et à le sécuriser en suivant les recommandations de mon hébergeur. J'ai beaucoup aimé cette partie qui m'a mis en difficulté, mais qui ensuite m'a permis de mieux comprendre comment fonctionner les serveurs dans leurs globalités.
 
-Mon serveur virtuel est hébergé par **OVH**, je vais créer un guide qui explique comment je l'ai configurer et je viendrai mettre le lien ici pour les personnes qui en ont besoin.
+Mon serveur virtuel est hébergé par **OVH**, j'ai créé une [fiche explicative](VPS.md) de tout le procédé, de l'achat à la mise en production.
 
 ---
 
