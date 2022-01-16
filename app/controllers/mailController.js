@@ -95,7 +95,8 @@ const mailController = {
             return res.json({"msg": "Merci pour ton mail ! Je reviens vers toi très vite !"});
 
         } catch (error) {
-            return res.status(500).send(err);
+            console.log(error)
+            return res.status(500).send(error);
         }
     },
 };
