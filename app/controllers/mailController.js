@@ -28,6 +28,7 @@ const mailController = {
             subject: `Nouvelle demande d'information ${infos.presta}`,
             replyTo: infos.clientEmail,
             text: `
+                Presta : ${infos.presta}
                 Nom : ${infos.clientName}\n
                 Mail : ${infos.clientEmail}\n
                 Numéro de téléphone : ${infos.clientTel ? infos.clientTel : 'pas renseigné'}\n

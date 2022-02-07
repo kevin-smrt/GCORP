@@ -29,7 +29,7 @@ function collectInfo(token) {
     const presta = document.querySelector('#presta').value;
     const name = document.querySelector('#name').value;
     const email = document.querySelector('#email').value;
-    const phone = document.querySelector('#tel').value;
+    const tel = document.querySelector('#tel').value;
     const weddingPlace = document.querySelector('#place').value;
     const weddingDate = document.querySelector('#date').value;
     const details = document.querySelector('#details').value;
@@ -42,9 +42,9 @@ function collectInfo(token) {
         presta: presta,
         name: name,
         email: email,
-        phone: phone,
-        weddingPlace: weddingPlace,
-        weddingDate: weddingDate,
+        tel: tel,
+        place: weddingPlace,
+        date: weddingDate,
         details: details,
         captcha: captcha
     });
